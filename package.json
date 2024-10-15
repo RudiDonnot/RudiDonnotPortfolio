@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://rudidonnot.github.io/portfolio/",
+  "homepage": "https://rudidonnot.github.io/RudiDonnotPortfolio/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

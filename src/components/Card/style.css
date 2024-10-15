@@ -66,20 +66,27 @@
   opacity: 1;
   width: 50%;
   opacity: 1;
+  font-size: 1vw;
   color: white;
   transition: opacity 0.3s ease-in-out;
   margin-left: 5% !important;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 300px) {
   .card-text {
-    font-size: 2vw;
+    font-size: 3vw !important;
+  }
+  .buttoncard {
+    font-size: 3vw !important;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
   .card-text {
-    font-size: 1vw;
+    font-size: 2vw !important;
+  }
+  .buttoncard {
+    font-size: 2vw !important;
   }
 }
 
@@ -90,7 +97,7 @@
   color: white;
   width: 50%;
   height: 10%;
-  font-size: 2vm;
+  font-size: 1vw;
   margin-top: 5%;
 }
 
