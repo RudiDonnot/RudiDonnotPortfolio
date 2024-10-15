@@ -101,7 +101,7 @@ function Home() {
         cardPositionmedium={"16 / 7 / 18 / 13"}
         cardPositionsmall={"10 / 1 / 12 / 13"}
         cardSrc={projet8}
-        cardUrl={" https://rudidonnot.github.io/Kasa/"}
+        cardUrl={"https://rudidonnot.github.io/Kasa"}
         cardAlt={
           "Le huitième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms"
         }
