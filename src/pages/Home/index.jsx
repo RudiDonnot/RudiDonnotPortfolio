@@ -70,7 +70,7 @@ function Home() {
       />
       <Card
         cardPosition={"3 / 10 / 14 / 13"}
-        cardPositionmedium={" 9 / 1 / 12 / 7"}
+        cardPositionmedium={" 9 / 1 / 14 / 7"}
         cardPositionsmall={"14 / 1 / 16 / 13"}
         cardSrc={projet6}
         cardUrl={"https://rudidonnot.github.io/sophie-bluel/"}
