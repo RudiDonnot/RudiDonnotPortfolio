@@ -71,7 +71,7 @@ function Card({
           <div className="buttontext">
             <p className="card-text">{cardText}</p>
             <button className="buttoncard" onClick={handleButtonClick}>
-              Cliquez ici
+              Visiter le site en un clic
             </button>
           </div>
         )}
