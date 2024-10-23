@@ -47,7 +47,7 @@ function Home() {
         cardPositionmedium={" 6 / 1 / 9 / 7"}
         cardPositionsmall={"4 / 1 / 6 / 13"}
         cardSrc={projet4}
-        cardUrl={" https://rudidonnot.github.io/ohmyfood/"}
+        cardUrl={"https://rudidonnot.github.io/ohmyfood/"}
         cardAlt={
           "Le quatrième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms"
         }
@@ -114,7 +114,7 @@ function Home() {
         cardPositionmedium={" 10 / 7 / 14 / 13"}
         cardPositionsmall={"8 / 1 / 10 / 13"}
         cardSrc={projet9}
-        cardUrl={"https://exemple.com/lien1"}
+        cardUrl={"https://rudidonnot.github.io/Nina-Carducci/"}
         cardAlt={
           "Le neuvième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms"
         }
@@ -127,7 +127,7 @@ function Home() {
         cardPositionmedium={" 14 / 1 / 18 / 7"}
         cardPositionsmall={"6 / 1 / 8 / 13"}
         cardSrc={projet10}
-        cardUrl={"https://exemple.com/lien1"}
+        cardUrl={"https://rudidonnot.github.io/724event/"}
         cardAlt={
           "Le dixième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms"
         }
