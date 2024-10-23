@@ -119,7 +119,7 @@ function Home() {
           "Le neuvième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms"
         }
         cardText={
-          "Le neuvième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms."
+          "Le neuvième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms qui consistait à corriger le SEO du site, voir de créer soit même des éléments aidant à un meilleur référencement. tech.: Javascript, HTML, CSS, Google snippet, Wave, Lighthouse"
         }
       />
       <Card
@@ -132,7 +132,7 @@ function Home() {
           "Le dixième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms"
         }
         cardText={
-          "Le dixième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms. tech.: HTML, CSS, Javascript, React, Create React App, React DOM"
+          "Le dixième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms. Le but fut de corriger des erreurs de code, de debugger. Le backend n'étant pas présent, le Slider n'est pas affichable. tech.: HTML, CSS, Javascript, React, Create React App, React DOM"
         }
       />
       <Card
@@ -145,7 +145,7 @@ function Home() {
           "Le onzième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms"
         }
         cardText={
-          "Le onzième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms. tech.: HTML, CSS, Javascript, React, Create React App, React DOM, Redux"
+          "Le onzième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms, j'ai pu apprendre à communiquer avec une base de donnée et à créer un swagger adapté à de futures demandes (le Backend n'étant pas présent, le contenu est fortement diminué). tech.: HTML, CSS, Javascript, React, Create React App, React DOM, Redux"
         }
       />
       <Card
