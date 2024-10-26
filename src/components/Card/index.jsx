@@ -18,7 +18,7 @@ function Card({
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 300) {
+      if (window.innerWidth <= 400) {
         setResponsiveCardPosition(cardPositionsmall);
       } else if (window.innerWidth <= 700) {
         setResponsiveCardPosition(cardPositionmedium);

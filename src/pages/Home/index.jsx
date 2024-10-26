@@ -17,7 +17,7 @@ function Home() {
   return (
     <main>
       <Card
-        cardPosition={"16 / 6 / 25 / 10"}
+        cardPosition={"14 / 6 / 23 / 10"}
         cardPositionmedium={" 3 / 1 / 6 / 7"}
         cardPositionsmall={"20 / 1 / 22 / 13"}
         cardSrc={projet2}
@@ -30,8 +30,8 @@ function Home() {
         }
       />
       <Card
-        cardPosition={"27 / 1 / 30 / 6"}
-        cardPositionmedium={" 1 / 7 / 4 / 13"}
+        cardPosition={"23 / 1 / 28 / 6"}
+        cardPositionmedium={" 9 / 1 / 14 / 7"}
         cardPositionsmall={"18 / 1 / 20 / 13"}
         cardSrc={projet3}
         cardUrl={"https://rudidonnot.github.io/Booki/"}
@@ -43,7 +43,7 @@ function Home() {
         }
       />
       <Card
-        cardPosition={"16 / 1 / 25 / 6"}
+        cardPosition={"14 / 1 / 23 / 6"}
         cardPositionmedium={" 6 / 1 / 9 / 7"}
         cardPositionsmall={"4 / 1 / 6 / 13"}
         cardSrc={projet4}
@@ -56,7 +56,7 @@ function Home() {
         }
       />
       <Card
-        cardPosition={"14 / 10 / 25 / 13"}
+        cardPosition={"12 / 10 / 23 / 13"}
         cardPositionmedium={" 4 / 7 / 7 / 13"}
         cardPositionsmall={"16 / 1 / 18 / 13"}
         cardSrc={projet5}
@@ -69,8 +69,8 @@ function Home() {
         }
       />
       <Card
-        cardPosition={"3 / 10 / 14 / 13"}
-        cardPositionmedium={" 9 / 1 / 14 / 7"}
+        cardPosition={"1 / 10 / 12 / 13"}
+        cardPositionmedium={" 1 / 7 / 4 / 13"}
         cardPositionsmall={"14 / 1 / 16 / 13"}
         cardSrc={projet6}
         cardUrl={"https://rudidonnot.github.io/sophie-bluel/"}
@@ -82,8 +82,8 @@ function Home() {
         }
       />
       <Card
-        cardPosition={"27 / 6 / 30 / 10"}
-        cardPositionmedium={" 7 / 7 / 10 / 13"}
+        cardPosition={"23 / 6 / 28 / 10"}
+        cardPositionmedium={" 7 / 7 / 9 / 13"}
         cardPositionsmall={"12 / 1 / 14 / 13"}
         cardSrc={projet7}
         cardUrl={
@@ -97,8 +97,8 @@ function Home() {
         }
       />
       <Card
-        cardPosition={"27 / 10 / 27 / 13"}
-        cardPositionmedium={"16 / 7 / 18 / 13"}
+        cardPosition={"23 / 10 / 24 / 13"}
+        cardPositionmedium={" 14 / 1 / 19 / 7"}
         cardPositionsmall={"10 / 1 / 12 / 13"}
         cardSrc={projet8}
         cardUrl={"https://rudidonnot.github.io/Kasa"}
@@ -110,8 +110,8 @@ function Home() {
         }
       />
       <Card
-        cardPosition={"3 / 1 / 12 / 6"}
-        cardPositionmedium={" 10 / 7 / 14 / 13"}
+        cardPosition={"1 / 1 / 10 / 6"}
+        cardPositionmedium={" 9 / 7 / 13 / 13"}
         cardPositionsmall={"8 / 1 / 10 / 13"}
         cardSrc={projet9}
         cardUrl={"https://rudidonnot.github.io/Nina-Carducci/"}
@@ -123,8 +123,8 @@ function Home() {
         }
       />
       <Card
-        cardPosition={"7 / 6 / 16 / 10"}
-        cardPositionmedium={" 14 / 1 / 18 / 7"}
+        cardPosition={"5 / 6 / 14 / 10"}
+        cardPositionmedium={" 13 / 7 / 15 / 13"}
         cardPositionsmall={"6 / 1 / 8 / 13"}
         cardSrc={projet10}
         cardUrl={"https://rudidonnot.github.io/724event/"}
@@ -136,11 +136,11 @@ function Home() {
         }
       />
       <Card
-        cardPosition={"12 / 1 / 16 / 6"}
-        cardPositionmedium={" 14 / 7 / 16 / 13"}
+        cardPosition={"10 / 1 / 14 / 6"}
+        cardPositionmedium={"19 / 1 / 21 / 13"}
         cardPositionsmall={"2 / 1 / 4 / 13"}
         cardSrc={projet11}
-        cardUrl={"https://exemple.com/lien1"}
+        cardUrl={"https://rudidonnot.github.io/ArgentBank-Frontend-only-/"}
         cardAlt={
           "Le onzième projet effectué dans le cadre du diplôme d'intégrateur web d'Openclassrooms"
         }
@@ -149,7 +149,7 @@ function Home() {
         }
       />
       <Card
-        cardPosition={"3 / 6 / 7 / 10"}
+        cardPosition={"1 / 6 / 5 / 10"}
         cardPositionmedium={" 1 / 1 / 3 / 7"}
         cardPositionsmall={"1 / 1 / 2 / 13"}
         cardSrc={Centralimage}
@@ -159,6 +159,7 @@ function Home() {
           "Je m'appelle Rudi Donnot, 28 ans, en 2023 j'ai entamé une formation d'Intégration Web d'OpenClassrooms, j'ai pu effectuer divers sites webs, notamment ceux présent dans ce portfolio. Chacun de ces sites représente une compétence que j'ai acquise durant ma formation. Cliquez sur chacun d'entre eux pour accéder au travail réalisé !"
         }
       />
+      <div className="infocard"></div>
     </main>
   );
 }
