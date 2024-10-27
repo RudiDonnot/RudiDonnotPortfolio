@@ -1,9 +1,8 @@
-#root {
+body {
   --verydarkgreen: rgb(34, 52, 34);
   --orangedark: rgb(225, 186, 114);
   background-color: var(--verydarkgreen);
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
@@ -23,10 +22,6 @@ main {
   p {
     font-size: 50%;
   }
-
-  .infocard {
-    grid-area: 24 / 10 / 28 / 13;
-  }
 }
 
 @media screen and (max-width: 700px) {
@@ -43,6 +38,7 @@ main {
 
   .infocard {
     grid-area: 15 / 7 / 19 / 13 !important;
+    background-color: var(--verydarkgreen) !important;
   }
 }
 
@@ -65,7 +61,7 @@ h2,
 h3,
 p {
   font-family: "M PLUS Rounded 1c", sans-serif;
-  color: rgb(42, 80, 42);
+  color: rgb(222, 206, 132);
 }
 
 .headerfooter {
@@ -79,6 +75,7 @@ p {
   background-color: white;
   width: 98%;
   height: 98%;
-  grid-area: 24 / 10 / 28 / 13;
+  grid-area: 23 / 10 / 25 / 13;
   border-radius: 25px;
+  background-color: var(--verydarkgreen);
 }

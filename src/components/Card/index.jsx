@@ -66,7 +66,7 @@ function Card({
         style={{ gridArea: responsiveCardPosition }}
         onClick={handleClick}
       >
-        <img src={cardSrc} alt={cardAlt} />
+        <img src={`${process.env.PUBLIC_URL}/assets/${cardSrc}`} alt="" />
         {clicked && (
           <div className="buttontext">
             <p className="card-text">{cardText}</p>
