@@ -1,0 +1,122 @@
+.loaderscreen
+  width: 100%
+  height: 100%
+  position: fixed
+  z-index: 3
+  background: #133274
+  animation: a4 1s 3s forwards
+
+.loader
+  z-index: 4
+  width: 8%
+  aspect-ratio: 1
+  border-radius: 50%
+  background: #aa88595d
+  display: grid
+  animation: l22-0 3s 1 linear
+  position: absolute
+  top: 40%
+  left: 46%
+  transform: rotate(90deg)
+  animation: a3 1s 3s forwards
+  position: fixed
+
+.loader:before, .loader:after
+  content: ""
+  grid-area: 1/1
+  margin: 22%
+  border-radius: 50%
+  background: inherit
+  transform: rotate(0deg) translate(150%)
+  animation: a2 1.5s 2
+
+.loader:after
+  animation-delay: -.5s
+  
+
+@keyframes l22-0
+  100%
+    transform: rotate(1.25turn)
+
+@keyframes a2
+  100%
+    transform: rotate(1turn) translate(150%)
+
+@keyframes a3
+  0%
+    background: white
+  100%
+    background: yellow
+    opacity: 0
+
+
+@keyframes a4
+  0%
+    background: white
+    opacity: 1
+  100%
+    opacity: 0.5
+  100%
+    opacity: 0
+
+
+@keyframes a5
+  0%
+      opacity: 0.5
+  100%
+    opacity: 1
+
+
+.part-1
+  background-color: #3A9E9D
+  height: 100vh
+  position: relative
+
+.part-2
+  background-color: #E4AD6A
+  height: 35vw
+  z-index: 4
+
+.part-3
+  background-color:  #CFF5DA
+  height: 40vw
+
+.part-4
+  background-color: #3A9E9D
+  height: 50vw
+
+.image-transition-container
+  position: fixed
+  top: 52%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 25%
+  height: 25%
+  
+
+  .transition-img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  .lightbulb-img
+    clip-path: inset(0 0 calc(var(--scroll-progress) * 100%) 0)
+    object-fit: contain
+
+  .letter-img
+    clip-path: inset(calc((1 - var(--scroll-progress)) * 100%) 0 0 0)
+
+    object-fit: contain
+
+  .colis-img
+    clip-path: inset(calc((3 - var(--scroll-progress)) * 100%) 0 0 0)
+    object-fit: contain
+  
+
+
+
+
+
+// ... reste de votre SASS ...
