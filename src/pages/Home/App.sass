@@ -1,25 +1,35 @@
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+p, h1, h2, h3, h4
+  color: white
+  transform: translateY(calc((var(--scroll-progress) * 20%)))
+  
 .loaderscreen
+  z-index: 10
   width: 100%
   height: 100%
   position: fixed
-  z-index: 3
   background: #133274
   animation: a4 1s 3s forwards
 
 .loader
-  z-index: 4
-  width: 8%
+  z-index: 11
   aspect-ratio: 1
   border-radius: 50%
   background: #aa88595d
   display: grid
-  animation: l22-0 3s 1 linear
-  position: absolute
-  top: 40%
-  left: 46%
+  animation: a1 3s 1 linear
+  position: fixed
+  top: 41vh
+  left: 42.5vw
+  width: 16vw
+  height: 16vw
   transform: rotate(90deg)
   animation: a3 1s 3s forwards
-  position: fixed
+
 
 .loader:before, .loader:after
   content: ""
@@ -34,7 +44,7 @@
   animation-delay: -.5s
   
 
-@keyframes l22-0
+@keyframes a1
   100%
     transform: rotate(1.25turn)
 
@@ -66,57 +76,84 @@
   100%
     opacity: 1
 
+.transition-img
+  position: fixed
+  top: 42vh
+  left: 42vw
+  width: 16vh
+  
+.lightbulb-img
+    z-index: 4
+    object-fit: cover
+    object-position: top
+    height: calc((0.70 - var(--scroll-progress)) / 4 * 100%)
+    width: calc((0.64 - var(--scroll-progress)) / 6 * 100%)
+    max-height: 21vh
+    min-width: 17vh
+    max-width: 25vh
+
+.letter-img
+    z-index: 3
+    object-fit: cover
+    object-position: top
+    height: calc((3.5 - var(--scroll-progress)) / 3.7 * 100%)
+    max-height: 9.5vh
+  
+.colis-img
+    z-index: 2
+    object-fit: cover
+    object-position: top
+    height: calc((7.5 - var(--scroll-progress)) / 3.7 * 100%)
+    max-height: 7vh
+    
 
 .part-1
   background-color: #3A9E9D
   height: 100vh
-  position: relative
+  display: flex
+  flex-direction: column
+  h3
+    margin: 13vh 0 0 5vw
+    font-size: 15vh
+    max-width: 87vw
+  h2
+    font-size: 3.5vh
+    margin: 0 0 0 5vw
+    width: 37vw
+  p
+    animation: 0.5s ease-in-out 1s infinite alternate forwards Hovering, 2s ease 7s 1 normal forwards Downfast
+    margin: 0 0 0 8vw
+    width: 34vw
+
+@keyframes Hovering
+  from
+    transform: translateY(0)
+  to
+    transform: translateY(5vh)
+
+@keyframes Downfast
+  50%
+    opacity: 1
+    transform: translateY(0)
+  100%
+    opacity: 0
+    transform: translateY(100vh)
+
+
 
 .part-2
   background-color: #E4AD6A
-  height: 35vw
-  z-index: 4
+  height: 70vh
 
 .part-3
   background-color:  #CFF5DA
-  height: 40vw
+  height: 100vh
 
 .part-4
   background-color: #3A9E9D
-  height: 50vw
-
-.image-transition-container
-  position: fixed
-  top: 52%
-  left: 50%
-  transform: translate(-50%, -50%)
-  width: 25%
-  height: 25%
-  
-
-  .transition-img
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-
-  .lightbulb-img
-    clip-path: inset(0 0 calc(var(--scroll-progress) * 100%) 0)
-    object-fit: contain
-
-  .letter-img
-    clip-path: inset(calc((1 - var(--scroll-progress)) * 100%) 0 0 0)
-
-    object-fit: contain
-
-  .colis-img
-    clip-path: inset(calc((3 - var(--scroll-progress)) * 100%) 0 0 0)
-    object-fit: contain
-  
+  height: 120vh
 
 
 
 
 
-// ... reste de votre SASS ...
