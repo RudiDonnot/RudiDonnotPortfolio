@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prout": "npm run build -- --outDir docs && git add . && git commit -m 'fresh update' && git push origin main"
   },
   "dependencies": {
     "@react-three/drei": "^9.56.2",
