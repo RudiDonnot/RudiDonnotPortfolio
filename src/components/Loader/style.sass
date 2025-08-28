@@ -1,0 +1,53 @@
+.lightbulb-loader
+  position: fixed
+  width: 40dvw
+  height: 40dvw
+  top: calc(   9dvw - (7dvw * clamp(0, var(--scroll-progress), 0.12) / 0.12) + (14dvw * max(0, var(--scroll-progress) - 0.12) / 0.04))
+  left: 30dvw
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: opacity 1s ease-out
+
+  .fade-out
+    opacity: 0
+    pointer-events: none
+
+  .loader
+    z-index: 11
+    aspect-ratio: 1
+    border-radius: 50%
+    background: #aa88595d
+    display: grid
+    animation: a1 3s 1 linear
+    width: 13dvw
+    height: 13dvw
+    transform: rotate(90deg)
+    animation: a3 1s 3s forwards
+
+  .loader:before, .loader:after
+    content: ""
+    grid-area: 1/1
+    margin: 22%
+    border-radius: 50%
+    background: inherit
+    transform: rotate(0deg) translate(150%)
+    animation: a2 1.5s 2
+
+  .loader:after
+    animation-delay: -.5s
+
+  @keyframes a1
+    100%
+      transform: rotate(1.25turn)
+
+  @keyframes a2
+    100%
+      transform: rotate(1turn) translate(150%)
+
+  @keyframes a3
+    0%
+      background: white
+    100%
+      background: yellow
+      opacity: 0

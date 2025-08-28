@@ -1,0 +1,62 @@
+@media screen and ( max-width: 430px )
+  .portfolio-root
+    .grid 
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important
+  
+.portfolio-root
+  background-color: rgb(34, 52, 34) 
+  padding: 1dvw 4dvw 0dvw 4dvw
+
+  header
+    background-color: #495b2d
+    margin: auto
+    margin-bottom: 0.8dvw
+    height: 8dvw
+    max-width: 1400px
+    border-radius: 1dvw
+    a
+      color: rgb(242, 208, 36)
+
+  img
+    border-radius: 1dvw
+  .grid 
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))
+    grid-auto-rows: 8px
+    grid-auto-flow: dense
+    gap: 0.8dvw
+    max-width: 1400px
+    margin: auto
+
+  .grid-item
+    width: 100%
+    overflow: hidden
+  
+  .grid-item img
+    width: 100%
+    display: block
+    object-fit: cover
+  
+  .headerfooter
+    display: flex
+    justify-content: center
+    flex-direction: column 
+    max-width: 1440px
+    img
+      width: 100%
+      height: 200px
+      border-radius: 30px
+
+  .textcontent 
+    position: absolute 
+    left: 0
+    right: 0 
+    margin-inline: auto
+    width: fit-content 
+
+  h1,
+  h2,
+  h3,
+  p
+    font-family: "M PLUS Rounded 1c", sans-serif 
+    color: rgb(222, 206, 132)
