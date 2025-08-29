@@ -1,8 +1,6 @@
-
-  
-
-
 .BusinessLandingMain
+  display: flex
+  flex-direction: column
   @media only screen and (max-width: 430px)
     .part-1
       padding-top: 15dvw
@@ -19,9 +17,6 @@
         top: 78dvw
         .cube
           transform: rotateX(calc(clamp(0, (var(--scroll-progress) - 0.6) / 0.22, 1) * -1turn)) !important
-
-  display: flex
-  flex-direction: column
 
   section
     height: 100dvw
