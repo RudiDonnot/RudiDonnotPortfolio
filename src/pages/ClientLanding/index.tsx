@@ -1,13 +1,12 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import ThreeDScene from './../../components/ThreeDModel';
 import ClientLandingTextData from '../../assets/data/ClientLandingTextData.json';
+import LightbulbLoader from '../../components/Loader';
+import ThreeDScene from '../../components/ThreeDModel';
 import ScrollText from '../../components/Scrolltext';
 import AnimatedImages from '../../components/AnimatedImages';
 import Explosion from '../../components/Explosion';
 import './style.sass';
-
-import LightbulbLoader from '../../components/Loader';
 
 const ClientLanding: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);

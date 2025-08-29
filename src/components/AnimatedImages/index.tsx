@@ -1,11 +1,5 @@
 import React from 'react';
 import './style.sass';
-import ClientLandingImageData from '../../assets/data/ClientLandingImageData';
-
-type ImageSet = {
-  a: string;
-  b: string;
-};
 
 interface Props {
   scrollProgress: number;
@@ -16,7 +10,24 @@ type Position = {
   left: number;
 };
 
-const images: ImageSet[] = ClientLandingImageData;
+// Typage explicite pour import.meta.glob
+const imagesModules: Record<string, string> = import.meta.glob(
+  '../../assets/ImageAnimatedImages/*.webp',
+  { eager: true, import: 'default' }
+);
+
+// Transforme en tableau trié (image1a, image1b, image2a, ...)
+const imagesArray: string[] = Object.values(imagesModules).sort((a, b) =>
+  a.localeCompare(b)
+);
+
+type ImageSet = { a: string; b: string };
+
+// On regroupe les images par paires (a/b)
+const images: ImageSet[] = [];
+for (let i = 0; i < imagesArray.length; i += 2) {
+  images.push({ a: imagesArray[i], b: imagesArray[i + 1] });
+}
 
 const toPx = (v: number, unit = 'vh') => `calc(${v}${unit})`;
 

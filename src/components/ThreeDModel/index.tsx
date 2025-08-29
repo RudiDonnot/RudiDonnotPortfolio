@@ -78,34 +78,19 @@ const AnimatedGLTFModel: React.FC<ThreeDModelProps> = React.memo(
       return light;
     }, []);
 
-    // Easing smoothstep
-    const smoothStep = (edge0: number, edge1: number, x: number) => {
-      const t = THREE.MathUtils.clamp((x - edge0) / (edge1 - edge0), 0, 1);
-      return t * t * (3 - 2 * t);
-    };
-
     // Animation frame
     useFrame(() => {
       if (!groupRef.current) return;
 
-      groupRef.current.rotation.y = scrollProgress * Math.PI * 2;
+      // ❌ Rotation supprimée
+      // groupRef.current.rotation.y = scrollProgress * Math.PI * 2;
+
+      // ✅ Seulement translation verticale
       groupRef.current.position.y = positionY + scrollProgress * 2;
 
-      // Calcul de la scale
+      // On applique uniquement le scale de base
       let newScale = initialScale;
-      if (scrollProgress < 0.13) {
-        newScale = initialScale;
-      } else if (scrollProgress <= 0.145) {
-        const t = smoothStep(0.13, 0.145, scrollProgress);
-        newScale = THREE.MathUtils.lerp(initialScale, initialScale * 0.12, t);
-      } else if (scrollProgress <= 0.16) {
-        const t = smoothStep(0.145, 0.16, scrollProgress);
-        newScale = THREE.MathUtils.lerp(initialScale * 0.12, 0, t);
-      } else {
-        newScale = 0;
-      }
 
-      // Si l'écran est large, réduire la taille de moitié
       if (isLargeScreen) newScale *= 0.5;
 
       groupRef.current.scale.setScalar(newScale);
