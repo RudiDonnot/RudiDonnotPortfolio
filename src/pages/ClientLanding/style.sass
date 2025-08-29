@@ -1,49 +1,42 @@
-@media only screen and (max-width: 430px)
-  .part-1
-    padding-top: 15dvw
-
-    .lightbulb
-      top: calc(30dvw + var(--scroll-progress) * 190dvw) !important
-
-  .part-2
-    .square
-      top: 57dvw !important
-
-  .part-3
-    .scene
-      top: 78dvw
-      .cube
-        transform: rotateX(calc(clamp(0, (var(--scroll-progress) - 0.6) / 0.22, 1) * -1turn)) !important
-  
-
-
 .ClientLandingMain
   display: flex
   flex-direction: column
-
-  section
-    height: 100dvw
+  
   h2
     font-size: 5dvw
+  @media only screen and (max-width: 430px)
+    .part-1
+      padding-top: 15dvw
+
+      .lightbulb
+        top: calc(38dvh + var(--scroll-progress) * 190dvw) !important
+
+    .part-2
+      .square
+        top: 57dvw !important
+
+    .part-3
+      .scene
+        top: 78dvw
+        .cube
+          transform: rotateX(calc(clamp(0, (var(--scroll-progress) - 0.6) / 0.22, 1) * -1turn)) !important
 
   .part-1
     background-color: #3A9E9D
-    height: 100dvh
+    height: 140dvh
     display: flex
-    
     flex-direction: column
-    justify-content: space-between
 
     h1
       text-shadow: 0px calc(var(--scroll-progress) * -200px) 1px black
       font-size: 18dvw
       max-width: 87dvw
-      margin: 14dvw 0 0 8dvw
+      margin: 5dvw 0 0 8dvw
       color: white
 
     h2
       color: white
-      margin: 20dvw 0 0 5dvw
+      margin: 15dvw 0 0 5dvw
       text-shadow: calc(var(--scroll-progress) * -100px) calc(var(--scroll-progress) * -50px) 1px black
 
     p
@@ -68,7 +61,7 @@
       position: fixed
       width: 40vw
       height: 40vw
-      top: calc(   18dvw - (7dvw * clamp(0, var(--scroll-progress), 0.12) / 0.12) + (14dvw * max(0, var(--scroll-progress) - 0.12) / 0.04))
+      top: calc(   10dvw - (7dvw * clamp(0, var(--scroll-progress), 0.12) / 0.12) + (14dvw * max(0, var(--scroll-progress) - 0.12) / 0.04))
       left: 30dvw
       z-index: 1
 
@@ -82,12 +75,20 @@
       height: 10dvw
       background-color: white
       position: sticky
-      top: 25dvw
+      top: 50dvh
       left: 43dvw
-      .square.hidden
-        display: none
+      transform: translateY(
+        clamp(
+          -5dvh,
+          calc(
+            -5dvh + (25.1dvh * ((var(--scroll-progress) - 0.15) / 0.37))
+          ),
+          20.1dvh
+        )
+)
+      opacity: 1
       .triangle-wrapper2
-        transform: translateY(-12dvw)
+        transform: translateY(-11.9dvw)
         .triangle2
           border-left: 7.5dvw solid transparent
           border-right: 7.5dvw solid transparent
@@ -96,7 +97,7 @@
           transform-origin: 50% 100%
           transform: rotateX(
             clamp(
-              90deg,
+              60deg,
               calc(
                 90deg + (var(--scroll-progress) - 0.16) * (140 - 90) / (0.20 - 0.16) * 1deg
               ),
@@ -116,6 +117,7 @@
   .part-3
     background-color: #E4AD6A
     height: 100dvh
+    z-index: 1
 
     .scene
       width: 16dvw
@@ -155,6 +157,8 @@
     h2
       color: #52331f
       margin: 0 0 0 50dvw
+      :has(.trigger:in-view) .square
+        opacity: 0
 
   .part-4
     background-color: #3A9E9D

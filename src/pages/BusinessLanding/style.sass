@@ -1,23 +1,25 @@
-@media only screen and (max-width: 430px)
-  .part-1
-    padding-top: 15dvw
 
-    .lightbulb
-      top: calc(30dvw + var(--scroll-progress) * 190dvw) !important
-
-  .part-2
-    .square
-      top: 57dvw !important
-
-  .part-3
-    .scene
-      top: 78dvw
-      .cube
-        transform: rotateX(calc(clamp(0, (var(--scroll-progress) - 0.6) / 0.22, 1) * -1turn)) !important
   
 
 
-.ClientLandingMain
+.BusinessLandingMain
+  @media only screen and (max-width: 430px)
+    .part-1
+      padding-top: 15dvw
+
+      .lightbulb
+        top: calc(30dvw + var(--scroll-progress) * 190dvw) !important
+
+    .part-2
+      .square
+        top: 57dvw !important
+
+    .part-3
+      .scene
+        top: 78dvw
+        .cube
+          transform: rotateX(calc(clamp(0, (var(--scroll-progress) - 0.6) / 0.22, 1) * -1turn)) !important
+
   display: flex
   flex-direction: column
 

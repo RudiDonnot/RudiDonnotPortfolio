@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import ThreeDScene from './../../components/ThreeDModel';
-import ClientLandingTextData from '../../assets/data/ClientLandingTextData.json';
+import BusinessLandingTextData from '../../assets/data/ClientLandingTextData.json';
 import ScrollText from '../../components/Scrolltext';
 import AnimatedImages from '../../components/AnimatedImages';
 import Explosion from '../../components/Explosion';
@@ -9,7 +9,7 @@ import './style.sass';
 
 import LightbulbLoader from '../../components/Loader';
 
-const ClientLanding: React.FC = () => {
+const BusinessLanding: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   useEffect(() => {
     let ticking = false;
@@ -36,7 +36,7 @@ const ClientLanding: React.FC = () => {
   return (
     <>
       <div
-        className="ClientLandingMain"
+        className="BusinessLandingMain"
         style={{ '--scroll-progress': scrollProgress } as React.CSSProperties}
       >
         <LightbulbLoader />
@@ -67,7 +67,7 @@ const ClientLanding: React.FC = () => {
             </div>
           </div>
           <h2>Faites moi part de vos ambitions</h2>
-          {ClientLandingTextData.map((item, idx) => (
+          {BusinessLandingTextData.map((item, idx) => (
             <ScrollText
               key={idx}
               text={item.text}
@@ -100,4 +100,4 @@ const ClientLanding: React.FC = () => {
   );
 };
 
-export default ClientLanding;
+export default BusinessLanding;

@@ -61,7 +61,7 @@ const ClientLanding: React.FC = () => {
           </div>
         </section>
         <section className="part-2">
-          <div className={`square ${scrollProgress >= 0.46 ? 'hidden' : ''}`}>
+          <div className={`square`}>
             <div className="triangle-wrapper2">
               <div className="triangle2"></div>
             </div>
