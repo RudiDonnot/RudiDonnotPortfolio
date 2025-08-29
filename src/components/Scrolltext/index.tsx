@@ -21,12 +21,11 @@ const ScrollText: FC<ScrollTextProps> = ({
   const charCount = Math.floor(text.length * progress);
 
   const containerStyle: React.CSSProperties = {
-    width: '20dvw',
+    width: '40dvw',
     position: left !== undefined || top !== undefined ? 'absolute' : undefined,
     left: left !== undefined ? `${left}dvw` : undefined,
     top: top !== undefined ? `${top}dvw` : undefined,
     overflow: 'hidden',
-    whiteSpace: 'nowrap',
   };
 
   const textStyle: React.CSSProperties = {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './style.sass';
 
 interface Props {
@@ -32,18 +32,6 @@ for (let i = 0; i < imagesArray.length; i += 2) {
 const toPx = (v: number, unit = 'vh') => `calc(${v}${unit})`;
 
 const AnimatedImages: React.FC<Props> = ({ scrollProgress }) => {
-  const [screenScale, setScreenScale] = useState(0.5); // Par défaut moitié de taille
-
-  // On met à jour le scale global selon la largeur de l'écran
-  useEffect(() => {
-    const updateScale = () => {
-      setScreenScale(window.innerWidth > 430 ? 1 : 0.5);
-    };
-    updateScale();
-    window.addEventListener('resize', updateScale);
-    return () => window.removeEventListener('resize', updateScale);
-  }, []);
-
   const lerp = (from: number, to: number, t: number) => from + (to - from) * t;
 
   const getStyle = (
@@ -54,7 +42,7 @@ const AnimatedImages: React.FC<Props> = ({ scrollProgress }) => {
   ) => ({
     top: toPx(lerp(from.top, to.top, t)),
     left: `${lerp(from.left, to.left, t)}vw`,
-    transform: `scale(${scale * screenScale})`,
+    transform: `scale(${scale})`,
     opacity: 1,
   });
 

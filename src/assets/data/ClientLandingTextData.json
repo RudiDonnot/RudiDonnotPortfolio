@@ -2,49 +2,49 @@
   {
     "text": "Je souhaiterais savoir combien de sections (ou « partitions ») vous me conseillez pour ma page d’accueil.\nQuelle taille approximative (hauteur/largeur) conviendrait pour chacune afin d’assurer une lecture agréable ?\nJe ne connais pas bien ces notions de « grilles » ou « layout », pouvez-vous m’expliquer simplement ?",
     "left": "10",
-    "top": "40",
+    "top": "50",
     "startingscroll": "0.26"
   },
   {
     "text": "J’aimerais un bouton d’appel à l’action (CTA) vraiment voyant pour “Acheter maintenant”.\nIl devrait avoir des couleurs vives, peut-être un dégradé et un petit effet au survol.\nPouvez-vous me montrer un exemple de style que vous pourriez réaliser ?",
     "left": "20",
-    "top": "55",
+    "top": "80",
     "startingscroll": "0.28"
   },
   {
     "text": "Je voudrais intégrer un objet 3D interactif qui reflète mon produit (par exemple, un modèle de casque audio).\nEst-ce possible de faire tourner l’objet, de zoomer, etc., directement sur la page ?\nQuels formats 3D utilisez-vous et comment ça impacte la vitesse de chargement ?",
     "left": "10",
-    "top": "70",
+    "top": "110",
     "startingscroll": "0.30"
   },
   {
     "text": "Je pense à un nom de domaine simple : “www.monproduitaudio.com”.\nEst‑ce disponible ? Pouvez‑vous m’aider à vérifier et à l’acheter ?\nExpliquez‑moi aussi comment ça se renouvelle chaque année.",
     "left": "20",
-    "top": "85",
+    "top": "140",
     "startingscroll": "0.32"
   },
   {
     "text": "Je souhaiterais un bouton pour passer du mode « Clair » au mode « Sombre » facilement.\nL’idée est de protéger les yeux la nuit et d’avoir un rendu lumineux le jour.\nEst‑ce coûteux en développement ? Comment l’implémente‑t‑on ?",
     "left": "70",
-    "top": "40",
+    "top": "50",
     "startingscroll": "0.27"
   },
   {
     "text": "Je vends en ligne et je collecte des informations clients : nom, adresse, paiement.\nJe tiens à ce que tout soit chiffré et protégé contre les pirates.\nQuelles mesures (SSL, pare‑feu, sauvegardes…) proposez‑vous pour garantir la sécurité ?",
     "left": "60",
-    "top": "55",
+    "top": "80",
     "startingscroll": "0.29"
   },
   {
     "text": "Il faut que le site s’affiche parfaitement sur ordinateur, tablette et smartphone.\nJe ne veux pas de zones trop petites ou un bouton illisible sur petit écran.\nComment assurez‑vous le « responsive » et quels tests réalisez‑vous ?",
     "left": "70",
-    "top": "70",
+    "top": "110",
     "startingscroll": "0.31"
   },
   {
     "text": "Enfin, j’aimerais savoir comment vous assurez la maintenance après la mise en ligne.\nComment puis‑je vous contacter si un bug apparaît ou si je veux une mise à jour ?\nQuels sont vos tarifs et délais pour ces interventions ?",
     "left": "60",
-    "top": "85",
+    "top": "140",
     "startingscroll": "0.33"
   }
 ]

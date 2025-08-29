@@ -12,42 +12,44 @@
     padding-top: 15dvw
 
     h1
-      text-shadow: 0px calc(var(--scroll-progress) * -200px) 1px black
+      text-shadow: 0px -10px 0px #327e7c
       font-size: 18dvw
       max-width: 87dvw
-      margin: 5dvw 0 0 8dvw
+      margin: 30dvw 0 0 8dvw
       color: white
+      white-space: pre
+
+    p
+      font-size: 18dvw
+      transform: translateY(calc(var(--scroll-progress) * 160dvw))
+      --shadow-x: calc(-10px + (20px * (min(var(--scroll-progress), 0.16) / 0.16)))
+      --shadow-opacity: calc(1 - ((max(0, min(var(--scroll-progress), 0.21) - 0.16)) / 0.05))
+      text-shadow: 0px var(--shadow-x) 0px rgba(50, 126, 124, var(--shadow-opacity))
+      opacity: clamp(
+        0,
+        calc(1 - (var(--scroll-progress) - 0.48) * 25),
+        1
+      )
+
+      color: white
+      position: fixed
+      left: 44dvw
+      margin-top: 30dvw
+      z-index:1
+      
 
     h2
       color: white
-      margin: 15dvw 0 0 5dvw
-      text-shadow: calc(var(--scroll-progress) * -100px) calc(var(--scroll-progress) * -50px) 1px black
-
-    p
-      animation: 0.9s ease-in-out 0s infinite alternate forwards Hovering, 1s ease 4s 1 normal forwards Downfast
-      margin: 10dvw 0 0 47dvw
-      font-size: 2dvw
-      color: #4fd3d1
-      position: absolute
-      @keyframes Hovering
-        from
-          transform: translateY(0)
-        to
-          transform: translateY(5dvw)
-      @keyframes Downfast
-        50%
-          opacity: 1
-        100%
-          opacity: 0
-          transform: translateY(100dvw)
+      margin: 100dvw 0 0 5dvw
+      text-shadow: 0px 10px 0px #327e7c 
 
     .lightbulb
-      position: fixed
       width: 61vw
-      height: clamp(0dvh, calc(58dvh * clamp((0.21 - var(--scroll-progress)) / 0.11, 0, 1)), 58dvh)
-      top: calc(32dvh + var(--scroll-progress) * 190dvw)
+      height: 58dvh
       left: 23dvw
       z-index: 1
+      position: absolute
+      top: 28dvh
 
   .part-2
     background-color: rgb(207, 245, 218)
@@ -60,7 +62,7 @@
       background-color: white
       position: sticky
       top: 119dvw
-      left: 35dvw
+      left: 44dvw
       transform: translateY(
         clamp(
           -22dvh,
@@ -80,12 +82,12 @@
           transform-origin: 50% 100%
           transform: rotateX(
             clamp(
-              60deg,
-              calc(
-                90deg + (var(--scroll-progress) - 0.16) * (140 - 90) / (0.20 - 0.16) * 1deg
-              ),
-              120deg
-            ))
+              0deg,
+              calc((var(--scroll-progress) - 0.22) * 8000deg),
+              160deg
+            )
+          )
+
           transition: none
 
     h2
@@ -101,12 +103,14 @@
 
     .scene
       top: 102dvw
+      left: 20dvw
       width: 32dvw
       height: 32dvw
       perspective: 125dvw
       margin: 2.6dvw auto
       transform: translateY(-13dvw)
       position: sticky
+      margin-left: 42dvw
       
       .cube
         width: 100%
@@ -152,10 +156,8 @@
       color: white
       margin: 130dvh 0 0 45dvh
 
+
   @media only screen and (min-width: 430px)
-    .part-1
-      .lightbulb
-        top: calc(   10dvw - (7dvw * clamp(0, var(--scroll-progress), 0.12) / 0.12) + (14dvw * max(0, var(--scroll-progress) - 0.12) / 0.04)) !important
 
     .part-2
       .square

@@ -40,9 +40,9 @@ const ClientLanding: React.FC = () => {
       >
         <LightbulbLoader />
         <section className="part-1">
-          <h1>Une idée&nbsp;?</h1>
+          <h1>Une&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?</h1>
+          <p>idée</p>
           <h2>Complétez vos projets par un site internet</h2>
-          <p>scroll</p>
           <div className="lightbulb">
             <Canvas
               dpr={[1, 2]}
@@ -51,7 +51,7 @@ const ClientLanding: React.FC = () => {
               camera={{ position: [0, 0, 5], fov: 75 }}
             >
               <Suspense fallback={null}>
-                <ThreeDScene scrollProgress={scrollProgress} />
+                <ThreeDScene />
               </Suspense>
             </Canvas>
           </div>
