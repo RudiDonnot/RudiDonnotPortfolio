@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo, useState, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useGLTF, OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
@@ -57,6 +57,19 @@ const AnimatedGLTFModel: React.FC<ThreeDModelProps> = React.memo(
       return { initialScale: scale, positionY: -0.6 };
     }, [clonedScene]);
 
+    // State pour détecter la largeur de l'écran (mobile-first)
+    const [isLargeScreen, setIsLargeScreen] = useState(
+      typeof window !== 'undefined' ? window.innerWidth > 430 : false
+    );
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsLargeScreen(window.innerWidth > 430);
+      };
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     // Lumière interne
     const internalLight = useMemo(() => {
       const light = new THREE.PointLight(0xffffee, 1000, 5);
@@ -78,6 +91,7 @@ const AnimatedGLTFModel: React.FC<ThreeDModelProps> = React.memo(
       groupRef.current.rotation.y = scrollProgress * Math.PI * 2;
       groupRef.current.position.y = positionY + scrollProgress * 2;
 
+      // Calcul de la scale
       let newScale = initialScale;
       if (scrollProgress < 0.13) {
         newScale = initialScale;
@@ -90,6 +104,9 @@ const AnimatedGLTFModel: React.FC<ThreeDModelProps> = React.memo(
       } else {
         newScale = 0;
       }
+
+      // Si l'écran est large, réduire la taille de moitié
+      if (isLargeScreen) newScale *= 0.5;
 
       groupRef.current.scale.setScalar(newScale);
     });

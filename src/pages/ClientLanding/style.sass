@@ -1,31 +1,15 @@
 .ClientLandingMain
   display: flex
   flex-direction: column
-  
   h2
     font-size: 5dvw
-  @media only screen and (max-width: 430px)
-    .part-1
-      padding-top: 15dvw
-
-      .lightbulb
-        top: calc(38dvh + var(--scroll-progress) * 190dvw) !important
-
-    .part-2
-      .square
-        top: 57dvw !important
-
-    .part-3
-      .scene
-        top: 78dvw
-        .cube
-          transform: rotateX(calc(clamp(0, (var(--scroll-progress) - 0.6) / 0.22, 1) * -1turn)) !important
-
+          
   .part-1
     background-color: #3A9E9D
     height: 140dvh
     display: flex
     flex-direction: column
+    padding-top: 15dvw
 
     h1
       text-shadow: 0px calc(var(--scroll-progress) * -200px) 1px black
@@ -59,10 +43,10 @@
 
     .lightbulb
       position: fixed
-      width: 40vw
-      height: 40vw
-      top: calc(   10dvw - (7dvw * clamp(0, var(--scroll-progress), 0.12) / 0.12) + (14dvw * max(0, var(--scroll-progress) - 0.12) / 0.04))
-      left: 30dvw
+      width: 59vw
+      height: 123vw
+      top: calc(38dvh + var(--scroll-progress) * 190dvw)
+      left: 23dvw
       z-index: 1
 
   .part-2
@@ -75,7 +59,7 @@
       height: 10dvw
       background-color: white
       position: sticky
-      top: 50dvh
+      top: 57dvw
       left: 43dvw
       transform: translateY(
         clamp(
@@ -85,8 +69,7 @@
           ),
           20.1dvh
         )
-)
-      opacity: 1
+      )
       .triangle-wrapper2
         transform: translateY(-11.9dvw)
         .triangle2
@@ -110,9 +93,6 @@
       margin: 17dvw 0 0 18dvw
       text-shadow: 1px 1px 2px pink
       position: sticky
-      
-
-
 
   .part-3
     background-color: #E4AD6A
@@ -120,22 +100,20 @@
     z-index: 1
 
     .scene
+      top: 78dvw
       width: 16dvw
       height: 16dvw
       perspective: 125dvw
       margin: 2.6dvw auto
       transform: translateY(-13dvw)
       position: sticky
-      top: 30dvw
+      
       .cube
         width: 100%
         height: 100%
         position: relative
         transform-style: preserve-3d
-        transform: rotateX(calc(
-        clamp(0, (var(--scroll-progress) - 0.5) / 0.40, 0.5)
-        * -1turn
-        ))
+        transform: rotateX(calc(clamp(0, (var(--scroll-progress) - 0.6) / 0.22, 1) * -1turn))
         transition: none
         .face
           position: absolute
@@ -166,4 +144,23 @@
     h2
       color: white
       margin: 130dvh 0 0 45dvh
+
+  @media only screen and (min-width: 430px)
+    .part-1
+    
+      .lightbulb
+        top: calc(   10dvw - (7dvw * clamp(0, var(--scroll-progress), 0.12) / 0.12) + (14dvw * max(0, var(--scroll-progress) - 0.12) / 0.04))
+
+    .part-2
+      .square
+        top: 50dvh
+
+    .part-3
+      .scene
+        top: 30dvw
+        .cube
+          transform: rotateX(calc(
+          clamp(0, (var(--scroll-progress) - 0.5) / 0.40, 0.5)
+          * -1turn
+          ))
 
