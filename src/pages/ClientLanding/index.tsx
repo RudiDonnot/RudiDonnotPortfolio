@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
 import ClientLandingTextData from '../../assets/data/ClientLandingTextData.json';
 import LightbulbLoader from '../../components/Loader';
 import ThreeDScene from '../../components/ThreeDModel';
@@ -44,16 +43,9 @@ const ClientLanding: React.FC = () => {
           <p>idée</p>
           <h2>Complétez vos projets par un site internet</h2>
           <div className="lightbulb">
-            <Canvas
-              dpr={[1, 2]}
-              shadows
-              frameloop="demand" // optimise le rendu pour les scènes statiques :contentReference[oaicite:5]{index=5}
-              camera={{ position: [0, 0, 5], fov: 75 }}
-            >
-              <Suspense fallback={null}>
-                <ThreeDScene />
-              </Suspense>
-            </Canvas>
+            <Suspense fallback={null}>
+              <ThreeDScene />
+            </Suspense>
           </div>
           <div className="triangle-wrapper1">
             <div className="triangle1"></div>
