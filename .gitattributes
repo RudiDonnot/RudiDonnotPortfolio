@@ -1,13 +1,7 @@
-cat > .gitattributes << 'EOF'
-
 * text=auto
-
-
 docs/** text eol=lf
-
 *.webp binary
 *.png binary
 *.jpg binary
 *.jpeg binary
 *.glb binary
-EOF
