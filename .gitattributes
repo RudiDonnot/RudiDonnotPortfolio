@@ -1,12 +1,10 @@
-# à la racine du repo
 cat > .gitattributes << 'EOF'
-# normalize text files
+
 * text=auto
 
-# ensure docs uses LF line endings
+
 docs/** text eol=lf
 
-# mark binaries so Git ne les modifie pas (webp, glb, images...)
 *.webp binary
 *.png binary
 *.jpg binary
